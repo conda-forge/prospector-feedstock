@@ -14,9 +14,8 @@ Summary: Prospector: python static analysis tool
 Current build status
 ====================
 
-[![Linux](https://img.shields.io/circleci/project/github/conda-forge/prospector-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/prospector-feedstock)
-[![OSX](https://img.shields.io/travis/conda-forge/prospector-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/prospector-feedstock)
-[![Windows](https://img.shields.io/appveyor/ci/conda-forge/prospector-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/prospector-feedstock/branch/master)
+All platforms:
+[![noarch](https://img.shields.io/circleci/project/github/conda-forge/prospector-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/prospector-feedstock)
 
 Current release info
 ====================
