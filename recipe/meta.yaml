@@ -1,6 +1,6 @@
 {% set name = "prospector" %}
-{% set version = "0.12.2" %}
-{% set sha256 = "eee570da89ac0fec8d746fc72c97e1a8aca9dd82161cac175d78ddd0d5170487" %}
+{% set version = "0.12.8" %}
+{% set sha256 = "5284460297787fc29d45733ecd63d93b8fea57d39e15bc821eb428873c4dc2a5" %}
 
 package:
   name: {{ name|lower }}
@@ -13,36 +13,37 @@ source:
 
 build:
   number: 0
-  script: python setup.py install --single-version-externally-managed --record=record.txt
+  noarch: python
+  script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - prospector = prospector.run:main
 
 requirements:
   build:
     - python
-    - setuptools
+    - pip
 
   run:
     - python
-    - pylint >=1.5.6
+    - pylint >=1.5.6,<2.0.0
     - pylint-celery >=0.3
     - pylint-django >=0.7.2
     - pylint-flask >=0.3
-    - pylint-plugin-utils >=0.2.3
-    - pylint-common >=0.2.2
+    - pylint-plugin-utils >=0.2.6
+    - pylint-common >=0.2.5
     - requirements-detector >=0.4.1
     - setoptconf >=0.2.0
     - dodgy >=0.1.9
     - pyyaml
     - mccabe >=0.5.0
-    - pyflakes >=0.8.1
-    - pycodestyle >=2.0.0
+    - pyflakes >=0.8.1,<2.0.0
+    - pycodestyle >=2.0.0,<2.4.0
     - pep8-naming >=0.3.3
-    - pydocstyle >=0.1
+    - pydocstyle >=2.0.0
     # Optional dependencies.
     - frosted >=1.4.1
     - vulture >=0.6
-    - pyroma >=2.0.2
+    - pyroma ==2.0.2
 
 test:
   imports:
@@ -66,8 +67,9 @@ test:
     - prospector --help
 
 about:
-  home: https://github.com/landscapeio/prospector
+  home: https://github.com/PyCQA/prospector
   license: GPL 2
+  license_file: LICENSE
   summary: "Prospector: python static analysis tool"
 
 extra:
