@@ -1,7 +1,7 @@
 About prospector
 ================
 
-Home: https://github.com/landscapeio/prospector
+Home: https://github.com/PyCQA/prospector
 
 Package license: GPL 2
 
