@@ -67,7 +67,7 @@ test:
     - prospector --help
 
 about:
-  home: https://github.com/landscapeio/prospector
+  home: https://github.com/PyCQA/prospector
   license: GPL 2
   license_file: LICENSE
   summary: "Prospector: python static analysis tool"
