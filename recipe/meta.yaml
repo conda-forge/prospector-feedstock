@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
@@ -26,9 +26,6 @@ requirements:
   run:
     - python
     - pylint >=1.5.6,<2.0.0
-    - pylint-celery >=0.3
-    - pylint-django >=0.7.2
-    - pylint-flask >=0.3
     - pylint-plugin-utils >=0.2.6
     - pylint-common >=0.2.5
     - requirements-detector >=0.4.1
