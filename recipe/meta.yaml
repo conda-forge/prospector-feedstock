@@ -40,7 +40,7 @@ requirements:
     # Optional dependencies.
     - frosted >=1.4.1
     - vulture >=0.6
-    - pyroma ==2.0.2
+    - pyroma >=2.3
 
 test:
   imports:
