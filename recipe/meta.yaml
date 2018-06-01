@@ -39,7 +39,7 @@ requirements:
     - pydocstyle >=2.0.0
     # Optional dependencies.
     - frosted >=1.4.1
-    - vulture >=0.6
+    - vulture >=0.6,<0.25
     - pyroma >=2.3
 
 test:
