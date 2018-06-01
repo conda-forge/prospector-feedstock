@@ -1,6 +1,6 @@
 {% set name = "prospector" %}
-{% set version = "0.12.10" %}
-{% set sha256 = "b49dacc6043f258e6a5ecc182ea1ac1da2b77b144bf0e940959d62da09906edb" %}
+{% set version = "0.12.11" %}
+{% set sha256 = "0390f4336f82820bc4d96b727e55719a3f88ab0789ee893a3eabaaa3fa0201f2" %}
 
 package:
   name: {{ name|lower }}
@@ -12,7 +12,7 @@ source:
   sha256: {{ sha256 }}
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: python -m pip install --no-deps --ignore-installed .
   entry_points:
@@ -39,7 +39,7 @@ requirements:
     - pydocstyle >=2.0.0
     # Optional dependencies.
     - frosted >=1.4.1
-    - vulture >=0.6
+    - vulture >=0.6,<0.25
     - pyroma >=2.3
 
 test:
