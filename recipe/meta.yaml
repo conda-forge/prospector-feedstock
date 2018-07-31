@@ -1,6 +1,6 @@
 {% set name = "prospector" %}
-{% set version = "0.12.11" %}
-{% set sha256 = "0390f4336f82820bc4d96b727e55719a3f88ab0789ee893a3eabaaa3fa0201f2" %}
+{% set version = "1.1.1" %}
+{% set sha256 = "e2e62b656cca5610d397d7dfe76288e9284283be1b551e0495dd6a823390db65" %}
 
 package:
   name: {{ name|lower }}
