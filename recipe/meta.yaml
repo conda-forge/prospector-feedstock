@@ -1,46 +1,47 @@
 {% set name = "prospector" %}
-{% set version = "0.12.11" %}
-{% set sha256 = "0390f4336f82820bc4d96b727e55719a3f88ab0789ee893a3eabaaa3fa0201f2" %}
+{% set version = "1.3.1" %}
+
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/prospector-{{ version }}.tar.gz
+  sha256: 700d7918d93d73035a2a58fb18c6be0b609a0481fc6e0908843fa856b89e52c6
 
 build:
   number: 0
   noarch: python
-  script: python -m pip install --no-deps --ignore-installed .
   entry_points:
     - prospector = prospector.run:main
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
-    - python
+    - python >=3.6
     - pip
-
   run:
-    - python
-    - pylint >=1.5.6,<2.0.0
-    - pylint-plugin-utils >=0.2.6
-    - pylint-common >=0.2.5
-    - requirements-detector >=0.4.1
-    - setoptconf >=0.2.0
+    - astroid ==2.4.1
     - dodgy >=0.1.9
-    - pyyaml
     - mccabe >=0.5.0
-    - pyflakes >=0.8.1,<2.0.0
-    - pycodestyle >=2.0.0,<2.4.0
-    - pep8-naming >=0.3.3
+    - pep8-naming >=0.3.3,<=0.10.0
+    - pycodestyle <2.7.0,>=2.6.0
     - pydocstyle >=2.0.0
+    - pyflakes <2.3.0,>=2.2.0
+    - pylint ==2.5.3
+    - pylint-celery ==0.3
+    - pylint-django <2.2.0
+    - pylint-flask ==0.6
+    - pylint-plugin-utils >=0.2.6
+    - python >=3.6
+    - pyyaml
+    - requirements-detector >=0.6
+    - setoptconf >=0.2.0
     # Optional dependencies.
     - frosted >=1.4.1
-    - vulture >=0.6,<0.25
-    - pyroma >=2.3
+    - vulture >=1.5
+    - pyroma >=2.4
 
 test:
   imports:
@@ -59,16 +60,20 @@ test:
     - prospector.tools.pylint
     - prospector.tools.pyroma
     - prospector.tools.vulture
-
   commands:
+    - pip check
     - prospector --help
+  requires:
+    - pip
 
 about:
   home: https://github.com/PyCQA/prospector
-  license: GPL 2
+  license: GPL-2.0-or-later
   license_file: LICENSE
   summary: "Prospector: python static analysis tool"
+  doc_url: https://prospector.landscape.io/
 
 extra:
   recipe-maintainers:
+    - anthchirp
     - jakirkham
