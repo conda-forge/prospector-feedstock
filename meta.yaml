@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/prospector-{{ version }}.tar.gz
-  sha256: 1d0b6a52bb44daad8f79041f216d8dcb7b0308bf76d5019432909bddeefd4001	
+  sha256: 1d0b6a52bb44daad8f79041f216d8dcb7b0308bf76d5019432909bddeefd4001
 
 build:
   number: 0
@@ -19,40 +19,41 @@ build:
 
 requirements:
   build:
-    - python>=3.6.1,<4.0
+    - python >=3.6.1,<4.0
     - pip
-    - poetry-core>=1.0.0
+    - poetry-core >=1.0.0
 
   run:
-    - pylint-plugin-utils>=0.2.6
-    - pylint-celery==0.3
-    - pylint-flask==0.6
-    - requirements-detector>=0.6
-    - setoptconf>=0.2.0
-    - dodgy>=0.1.9
+    - python >=3.6.1,<4.0
+    - pylint-plugin-utils >=0.2.6
+    - pylint-celery ==0.3
+    - pylint-flask ==0.6
+    - requirements-detector >=0.6
+    - setoptconf >=0.2.0
+    - dodgy >=0.1.9
     - pyyaml
-    - mccabe>=0.5.0
-    - pyflakes<2.3.0,>=2.2.0
-    - pycodestyle<2.9.0,>=2.6.0
-    - pep8-naming>=0.3.3,<=0.10.0
-    - pydocstyle>=2.0.0
-    - pylint<3,>=2.8.3
-    - pylint-django<2.2.0
+    - mccabe >=0.5.0
+    - pyflakes <2.3.0,>=2.2.0
+    - pycodestyle <2.9.0,>=2.6.0
+    - pep8-naming >=0.3.3,<=0.10.0
+    - pydocstyle >=2.0.0
+    - pylint <3,>=2.8.3
+    - pylint-django <2.2.0
 
   run_constrained:
-    - bandit>=1.5.1
-    - frosted>=1.4.1
-    - vulture>=1.5
-    - mypy>=0.600
-    - pyroma>=2.4
+    - bandit >=1.5.1
+    - frosted >=1.4.1
+    - vulture >=1.5
+    - mypy >=0.600
+    - pyroma >=2.4
 
 test:
   requires:
-    - bandit>=1.5.1
-    - frosted>=1.4.1
-    - vulture>=1.5
-    - mypy>=0.600
-    - pyroma>=2.4
+    - bandit >=1.5.1
+    - frosted >=1.4.1
+    - vulture >=1.5
+    - mypy >=0.600
+    - pyroma >=2.4
   imports:
     - prospector
     - prospector.config
