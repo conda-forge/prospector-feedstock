@@ -1,5 +1,5 @@
 {% set name = "prospector" %}
-{% set version = "1.3.1" %}
+{% set version = "1.5.1" %}
 
 
 package:
@@ -19,31 +19,32 @@ build:
 
 requirements:
   build:
-    - python >=3.6
+    - python >=3.6.1,<4.0
     - pip
+
   run:
-    - astroid ==2.4.1
-    - dodgy >=0.1.9
-    - mccabe >=0.5.0
+    - python >=3.6.1,<4
+    - pylint >=2.8.3,<3
+    - pylint-celery =0.3
+    - pylint-django >=2.4.4,<3
+    - pylint-flask =0.6
+    - pylint-plugin-utils >=0.6,<1
+    - requirements-detector >=0.7,<1
+    - PyYAML
+    - mccabe >=0.6.0,<1
+    - pyflakes >=2.2.0,<2.4.0
+    - pycodestyle >=2.6.0,<2.9.0
     - pep8-naming >=0.3.3,<=0.10.0
-    - pycodestyle <2.7.0,>=2.6.0
     - pydocstyle >=2.0.0
-    - pyflakes <2.3.0,>=2.2.0
-    - pylint ==2.5.3
-    - pylint-celery ==0.3
-    - pylint-django <2.2.0
-    - pylint-flask ==0.6
-    - pylint-plugin-utils >=0.2.6
-    - python >=3.6
-    - pyyaml
-    - requirements-detector >=0.6
-    - setoptconf >=0.2.0
-    # Optional dependencies.
+    - dodgy >=0.2.1,<1
+    - toml >=0.10.2,<1
+    - setoptconf-tmp >=0.3.1,<1
+  run_constrained:
+    - bandit >=1.5.1
     - frosted >=1.4.1
     - vulture >=1.5
+    - mypy >=0.600
     - pyroma >=2.4
-  run_constrained:
-    - django >=3.1.3
 
 test:
   imports:
@@ -52,9 +53,11 @@ test:
     - prospector.formatters
     - prospector.profiles
     - prospector.tools
+    - prospector.tools.bandit
     - prospector.tools.dodgy
     - prospector.tools.frosted
     - prospector.tools.mccabe
+    - prospector.tools.mypy
     - prospector.tools.pep257
     - prospector.tools.pep8
     - prospector.tools.profile_validator
