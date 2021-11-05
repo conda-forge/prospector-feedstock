@@ -1,5 +1,5 @@
 {% set name = "prospector" %}
-{% set version = "1.3.1" %}
+{% set version = "1.4.1.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/prospector-{{ version }}.tar.gz
-  sha256: 700d7918d93d73035a2a58fb18c6be0b609a0481fc6e0908843fa856b89e52c6
+  sha256: 1d0b6a52bb44daad8f79041f216d8dcb7b0308bf76d5019432909bddeefd4001
 
 build:
   number: 0
@@ -19,42 +19,52 @@ build:
 
 requirements:
   build:
-    - python >=3.6
+    - python >=3.6.1,<4.0
     - pip
+    - poetry-core >=1.0.0
+
   run:
-    - astroid ==2.4.1
-    - dodgy >=0.1.9
-    - mccabe >=0.5.0
-    - pep8-naming >=0.3.3,<=0.10.0
-    - pycodestyle <2.7.0,>=2.6.0
-    - pydocstyle >=2.0.0
-    - pyflakes <2.3.0,>=2.2.0
-    - pylint ==2.5.3
-    - pylint-celery ==0.3
-    - pylint-django <2.2.0
-    - pylint-flask ==0.6
+    - python >=3.6.1,<4.0
     - pylint-plugin-utils >=0.2.6
-    - python >=3.6
-    - pyyaml
+    - pylint-celery ==0.3
+    - pylint-flask ==0.6
     - requirements-detector >=0.6
     - setoptconf >=0.2.0
-    # Optional dependencies.
+    - dodgy >=0.1.9
+    - pyyaml
+    - mccabe >=0.5.0
+    - pyflakes <2.3.0,>=2.2.0
+    - pycodestyle <2.9.0,>=2.6.0
+    - pep8-naming >=0.3.3,<=0.10.0
+    - pydocstyle >=2.0.0
+    - pylint <3,>=2.8.3
+    - pylint-django <2.2.0
+
+  run_constrained:
+    - bandit >=1.5.1
     - frosted >=1.4.1
     - vulture >=1.5
+    - mypy >=0.600
     - pyroma >=2.4
-  run_constrained:
-    - django >=3.1.3
 
 test:
+  requires:
+    - bandit >=1.5.1
+    - frosted >=1.4.1
+    - vulture >=1.5
+    - mypy >=0.600
+    - pyroma >=2.4
   imports:
     - prospector
     - prospector.config
     - prospector.formatters
     - prospector.profiles
     - prospector.tools
+    - prospector.tools.bandit
     - prospector.tools.dodgy
     - prospector.tools.frosted
     - prospector.tools.mccabe
+    - prospector.tools.mypy
     - prospector.tools.pep257
     - prospector.tools.pep8
     - prospector.tools.profile_validator
@@ -65,8 +75,6 @@ test:
   commands:
     - pip check
     - prospector --help
-  requires:
-    - pip
 
 about:
   home: https://github.com/PyCQA/prospector
