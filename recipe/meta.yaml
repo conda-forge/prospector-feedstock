@@ -1,5 +1,5 @@
 {% set name = "prospector" %}
-{% set version = "1.4.1.1" %}
+{% set version = "1.5.3.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/prospector-{{ version }}.tar.gz
-  sha256: 1d0b6a52bb44daad8f79041f216d8dcb7b0308bf76d5019432909bddeefd4001
+  sha256: c8d8d00e6806f7ece9829026ef8b7d3cbd901d473913f9bc5a389df4e8f435c6
 
 build:
   number: 0
@@ -18,7 +18,7 @@ build:
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
-  build:
+  host:
     - python >=3.6.1,<4.0
     - pip
     - poetry-core >=1.0.0
@@ -80,7 +80,7 @@ about:
   home: https://github.com/PyCQA/prospector
   license: GPL-2.0-or-later
   license_file: LICENSE
-  summary: "Prospector: python static analysis tool"
+  summary: 'Prospector: python static analysis tool'
   doc_url: https://prospector.landscape.io/
 
 extra:
