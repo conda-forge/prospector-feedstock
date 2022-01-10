@@ -24,21 +24,23 @@ requirements:
     - poetry-core >=1.0.0
 
   run:
-    - python >=3.6.1,<4.0
-    - pylint-plugin-utils >=0.2.6
-    - pylint-celery ==0.3
-    - pylint-flask ==0.6
-    - requirements-detector >=0.6
-    - setoptconf >=0.2.0
-    - dodgy >=0.1.9
-    - pyyaml
-    - mccabe >=0.5.0
-    - pyflakes <2.3.0,>=2.2.0
-    - pycodestyle <2.9.0,>=2.6.0
+    - backports-zoneinfo  # https://github.com/conda-forge/django-feedstock/issues/134
+    - dodgy >=0.2.1,<1.0.0
+    - mccabe >=0.6.0,<1.0.0
     - pep8-naming >=0.3.3,<=0.10.0
+    - pycodestyle >=2.6.0,<2.9.0
     - pydocstyle >=2.0.0
-    - pylint <3,>=2.8.3
-    - pylint-django <2.2.0
+    - pyflakes >=2.2.0,<2.4.0
+    - pylint >=2.8.3,<3.0.0
+    - pylint-celery ==0.3
+    - pylint-django >=2.4.4,<3.0.0
+    - pylint-flask ==0.6
+    - pylint-plugin-utils >=0.6.0,<1.0.0
+    - python >=3.6.1,<4.0
+    - pyyaml
+    - requirements-detector >=0.7,<1.0
+    - setoptconf >=0.2.0
+    - setoptconf-tmp >=0.3.1,<1.0
 
   run_constrained:
     - bandit >=1.5.1
