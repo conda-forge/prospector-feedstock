@@ -24,7 +24,7 @@ requirements:
     - poetry-core >=1.0.0
 
   run:
-    - backports-zoneinfo  # https://github.com/conda-forge/django-feedstock/issues/134
+    - backports.zoneinfo  # https://github.com/conda-forge/django-feedstock/issues/134
     - dodgy >=0.2.1,<1.0.0
     - mccabe >=0.6.0,<1.0.0
     - pep8-naming >=0.3.3,<=0.10.0
