@@ -1,13 +1,15 @@
 About prospector
 ================
 
-Home: https://github.com/PyCQA/prospector
+Home: https://pypi.org/project/prospector/
 
 Package license: GPL-2.0-or-later
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/prospector-feedstock/blob/master/LICENSE.txt)
 
 Summary: Prospector: python static analysis tool
+
+Development: https://github.com/PyCQA/prospector
 
 Documentation: https://prospector.landscape.io/
 
