@@ -30,13 +30,13 @@ requirements:
     - pep8-naming >=0.3.3,<=0.10.0
     - pycodestyle >=2.6.0,<2.9.0
     - pydocstyle >=2.0.0
-    - pyflakes >=2.2.0,<2.4.0
+    - pyflakes >=2.2.0,<3.0
     - pylint >=2.8.3,<3.0.0
     - pylint-celery ==0.3
-    - pylint-django >=2.4.4,<2.5.0
+    - pylint-django >=2.5,<2.6.0
     - pylint-flask ==0.6
-    - pylint-plugin-utils >=0.6,<0.7
-    - python >=3.6.1,<4.0
+    - pylint-plugin-utils >=0.7,<0.8
+    - python >=3.6.2,<4.0
     - pyyaml
     - requirements-detector >=0.7,<0.8
     - setoptconf-tmp >=0.3.1,<0.4
@@ -67,9 +67,9 @@ test:
     - prospector.tools.frosted
     - prospector.tools.mccabe
     - prospector.tools.mypy
-    - prospector.tools.pep257
-    - prospector.tools.pep8
     - prospector.tools.profile_validator
+    - prospector.tools.pycodestyle
+    - prospector.tools.pydocstyle
     - prospector.tools.pyflakes
     - prospector.tools.pylint
     - prospector.tools.pyroma
