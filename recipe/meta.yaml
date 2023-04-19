@@ -44,7 +44,6 @@ requirements:
 
   run_constrained:
     - bandit >=1.5.1
-    - frosted >=1.4.1
     - vulture >=1.5
     - mypy >=0.600
     - pyroma >=2.4
@@ -52,7 +51,6 @@ requirements:
 test:
   requires:
     - bandit >=1.5.1
-    - frosted >=1.4.1
     - vulture >=1.5
     - mypy >=0.600
     - pyroma >=2.4
@@ -64,7 +62,6 @@ test:
     - prospector.tools
     - prospector.tools.bandit
     - prospector.tools.dodgy
-    - prospector.tools.frosted
     - prospector.tools.mccabe
     - prospector.tools.mypy
     - prospector.tools.profile_validator
