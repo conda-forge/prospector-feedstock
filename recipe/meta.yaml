@@ -27,6 +27,7 @@ requirements:
     - backports.zoneinfo  # https://github.com/conda-forge/django-feedstock/issues/134
     - dodgy >=0.2.1,<0.3.0
     - flake8 <6.0.0
+    - gitpython >=3.1.27
     - mccabe >=0.7.0,<0.8.0
     - packaging
     - pep8-naming >=0.3.3,<=0.10.0
@@ -42,9 +43,10 @@ requirements:
     - pyyaml
     - setoptconf-tmp >=0.3.1,<0.4
     - toml >=0.10.2,<0.11.0
-    # from pip at the moment:
-    # - requirements-detector >=1.0.3
-    # - GitPython >=3.1.27
+    # from PyPi only at the moment:
+    # requirements-detector >=1.0.3
+    # opened PR to bump version
+    # github.com/conda-forge/requirements-detector-feedstock/pull/18
 
   run_constrained:
     - bandit >=1.5.1
