@@ -42,9 +42,9 @@ requirements:
     - pyyaml
     - setoptconf-tmp >=0.3.1,<0.4
     - toml >=0.10.2,<0.11.0
-    - pip:
-      - requirements-detector >=1.0.3
-      - GitPython >=3.1.27
+    # from pip at the moment:
+    # - requirements-detector >=1.0.3
+    # - GitPython >=3.1.27
 
   run_constrained:
     - bandit >=1.5.1
