@@ -44,7 +44,6 @@ requirements:
     - setoptconf-tmp >=0.3.1,<0.4
     - toml >=0.10.2,<0.11.0
     - requirements-detector >=1.0.3
-    # github.com/conda-forge/requirements-detector-feedstock/pull/18
 
   run_constrained:
     - bandit >=1.5.1
