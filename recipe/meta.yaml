@@ -53,7 +53,7 @@ requirements:
 
 test:
   requires:
-    - bandit >=1.5.1
+    - bandit
     - vulture >=1.5
     - mypy >=0.600
     - pyroma >=2.4
