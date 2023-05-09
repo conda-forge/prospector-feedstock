@@ -1,5 +1,5 @@
 {% set name = "prospector" %}
-{% set version = "1.7.7" %}
+{% set version = "1.9.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/prospector-{{ version }}.tar.gz
-  sha256: c04b3d593e7c525cf9a742fed62afbe02e2874f0e42f2f56a49378fd94037360
+  sha256: 599f31516f857d785058773875e9358702ad653e65461e8cad44134d8ee17b1f
 
 build:
   number: 0
@@ -19,43 +19,44 @@ build:
 
 requirements:
   host:
-    - python >=3.6.1,<4.0
+    - python >=3.7.2,<4.0
     - pip
     - poetry-core >=1.0.0
 
   run:
     - backports.zoneinfo  # https://github.com/conda-forge/django-feedstock/issues/134
     - dodgy >=0.2.1,<0.3.0
-    - mccabe >=0.6.0,<0.7.0
+    - flake8 <6.0.0
+    - gitpython >=3.1.27,<4
+    - mccabe >=0.7.0,<0.8.0
+    - packaging
     - pep8-naming >=0.3.3,<=0.10.0
-    - pycodestyle >=2.6.0,<2.9.0
-    - pydocstyle >=2.0.0
+    - pycodestyle >=2.9.0
+    - pydocstyle >=6.3.0
     - pyflakes >=2.2.0,<3.0
-    - pylint >=2.8.3,<3.0.0
+    - pylint >=2.8.3
     - pylint-celery ==0.3
     - pylint-django >=2.5,<2.6.0
     - pylint-flask ==0.6
     - pylint-plugin-utils >=0.7,<0.8
-    - python >=3.6.2,<4.0
+    - python >=3.7.2,<4.0
     - pyyaml
-    - requirements-detector >=0.7,<0.8
     - setoptconf-tmp >=0.3.1,<0.4
     - toml >=0.10.2,<0.11.0
+    - requirements-detector >=1.0.3
 
   run_constrained:
     - bandit >=1.5.1
-    - frosted >=1.4.1
     - vulture >=1.5
     - mypy >=0.600
     - pyroma >=2.4
 
 test:
   requires:
-    - bandit >=1.5.1
-    - frosted >=1.4.1
-    - vulture >=1.5
-    - mypy >=0.600
-    - pyroma >=2.4
+    - bandit
+    - vulture
+    - mypy
+    - pyroma
   imports:
     - prospector
     - prospector.config
@@ -64,7 +65,6 @@ test:
     - prospector.tools
     - prospector.tools.bandit
     - prospector.tools.dodgy
-    - prospector.tools.frosted
     - prospector.tools.mccabe
     - prospector.tools.mypy
     - prospector.tools.profile_validator
@@ -90,3 +90,4 @@ extra:
   recipe-maintainers:
     - anthchirp
     - jakirkham
+    - valeriupredoi
