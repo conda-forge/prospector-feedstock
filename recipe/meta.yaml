@@ -27,7 +27,7 @@ requirements:
     - backports.zoneinfo  # https://github.com/conda-forge/django-feedstock/issues/134
     - dodgy >=0.2.1,<0.3.0
     - flake8 <6.0.0
-    - gitpython >=3.1.27
+    - gitpython >=3.1.27,<4
     - mccabe >=0.7.0,<0.8.0
     - packaging
     - pep8-naming >=0.3.3,<=0.10.0
