@@ -54,9 +54,9 @@ requirements:
 test:
   requires:
     - bandit
-    - vulture >=1.5
-    - mypy >=0.600
-    - pyroma >=2.4
+    - vulture
+    - mypy
+    - pyroma
   imports:
     - prospector
     - prospector.config
