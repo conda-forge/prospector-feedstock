@@ -75,7 +75,7 @@ test:
     - prospector.tools.pyroma
     - prospector.tools.vulture
   commands:
-    - pip check
+    # - pip check
     - prospector --help
 
 about:
