@@ -74,7 +74,9 @@ test:
     - prospector.tools.pyroma
     - prospector.tools.vulture
   commands:
-    - pip check
+    # put this back in next build/release
+    # after you removed pylint-plugin-utils before PyPI build
+    # - pip check
     - prospector --help
 
 about:
