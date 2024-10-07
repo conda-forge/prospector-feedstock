@@ -38,7 +38,6 @@ requirements:
     - pylint-celery ==0.3
     - pylint-django >=2.5.5,<2.6
     - pylint-flask ==0.6
-    - pylint-plugin-utils >=0.8
     - python >=3.8.1,<4.0
     - pyyaml
     - setoptconf-tmp >=0.3.1,<0.4
@@ -75,7 +74,7 @@ test:
     - prospector.tools.pyroma
     - prospector.tools.vulture
   commands:
-    # - pip check
+    - pip check
     - prospector --help
 
 about:
