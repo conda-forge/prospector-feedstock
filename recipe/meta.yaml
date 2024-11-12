@@ -1,5 +1,5 @@
 {% set name = "prospector" %}
-{% set version = "1.12.1" %}
+{% set version = "1.13.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/prospector-{{ version }}.tar.gz
-  sha256: b9bb4bcdd77b943c597ee4f374960e851cdd2a0b4b60eaeeaf0da465facafc60
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/prospector-{{ version }}.tar.gz
+  sha256: d7061ac2e0ee419266c7b958f59912ed39441769d4029250a7135a6ec7440420
 
 build:
   number: 0
@@ -42,7 +42,7 @@ requirements:
     - pyyaml
     - setoptconf-tmp >=0.3.1,<0.4
     - toml >=0.10.2,<0.11.0
-    - requirements-detector >=1.3.1
+    - requirements-detector >=1.3.2
 
   run_constrained:
     - bandit >=1.5.1
@@ -75,8 +75,6 @@ test:
     - prospector.tools.pyroma
     - prospector.tools.vulture
   commands:
-    # put this back in next build/release
-    # after you removed pylint-plugin-utils before PyPI build
     # - pip check
     - prospector --help
 
