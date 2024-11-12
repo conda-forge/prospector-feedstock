@@ -7,7 +7,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/prospector-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/prospector-{{ version }}.tar.gz
   sha256: d7061ac2e0ee419266c7b958f59912ed39441769d4029250a7135a6ec7440420
 
 build:
