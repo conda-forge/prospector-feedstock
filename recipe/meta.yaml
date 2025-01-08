@@ -11,7 +11,7 @@ source:
   sha256: 36ccb13f69aa27c5c4682afd4cc46219b9e0c80723e30dc64ff30c71f7b877a1
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - prospector = prospector.run:main
@@ -19,7 +19,7 @@ build:
 
 requirements:
   host:
-    - python >=3.9,<4.0
+    - python {{ python_min }}
     - pip
     - poetry-core >=1.0.0
 
@@ -38,7 +38,7 @@ requirements:
     - pylint-celery ==0.3
     - pylint-django >=2.6.1
     - pylint-flask ==0.6
-    - python >=3.9,<4.0
+    - python >={{ python_min }},<4.0
     - pyyaml
     - setoptconf-tmp >=0.3.1,<0.4
     - toml >=0.10.2,<0.11.0
@@ -57,6 +57,7 @@ test:
     - vulture
     - mypy
     - pyroma
+    - python {{ python_min }}
   imports:
     - prospector
     - prospector.config
