@@ -11,7 +11,7 @@ source:
   sha256: 9a6669cf5eea935bfc66eb9b1b551c0cfbd735b215415c053603b31069718d9d
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - prospector = prospector.run:main
