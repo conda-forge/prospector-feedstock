@@ -11,7 +11,7 @@ source:
   sha256: a6087287722104788c4366272c7f2095c748cb8968c5aac48c764f9e3eff2fea
 
 build:
-  number: 0
+  number: 1
   noarch: python
   entry_points:
     - prospector = prospector.run:main
@@ -58,6 +58,7 @@ test:
     - mypy
     - pyroma
     - python {{ python_min }}
+    - pip
   imports:
     - prospector
     - prospector.config
@@ -76,7 +77,7 @@ test:
     - prospector.tools.pyroma
     - prospector.tools.vulture
   commands:
-    # - pip check
+    - pip check
     - prospector --help
 
 about:
