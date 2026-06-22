@@ -1,5 +1,5 @@
 {% set name = "prospector" %}
-{% set version = "1.18.0" %}
+{% set version = "1.19.0" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/prospector-{{ version }}.tar.gz
-  sha256: e0d3d8f8601dd86064a120aca93d91bfe30a35b2241ebd84279738d3a1f2f87c
+  sha256: c7e0b74daee9b4610b9dc993e07e97d506a7a8ede7d5417dbf4ddc7cee0167e9
 
 build:
   number: 0
