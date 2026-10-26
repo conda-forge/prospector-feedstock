@@ -1,5 +1,5 @@
 {% set name = "prospector" %}
-{% set version = "1.19.1" %}
+{% set version = "1.20.0" %}
 
 
 package:
@@ -7,8 +7,8 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/prospector-{{ version }}.tar.gz
-  sha256: b3c9855e82b6f450808c967a34d45653ba9920fb49a159ce005642d15d6968a2
+  url: https://files.pythonhosted.org/packages/source/{{ name[0] }}/{{ name }}/prospector-{{ version }}.tar.gz
+  sha256: c5afea89d859a0a1d6fcecb31128775eb563bfd73c18e9c76477d520a849c747
 
 build:
   number: 0
